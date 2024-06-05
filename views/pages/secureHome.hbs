@@ -1,0 +1,47 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  </head>
+
+  <body>
+
+    <div class="container mt-5">
+
+      <h1 class="h1 text-dark text-center">
+        Welcome to authorized secure Home
+      </h1>
+
+    </div>
+
+    {{#if message}}
+
+      <div class="alert alert-success alert-dismissible">
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+        ></button>
+        <strong>{{message}} </strong>
+
+      </div>
+
+    {{/if}}
+
+   
+   {{> bookTable}}
+
+
+
+    <div class="mt-4 p-5 bg-primary text-white rounded">
+      <h1>Give Away Soon...</h1>
+      <p> Date: 23 june 2024</p>
+    </div>
+
+
+    {{> userTable}}
+
+    
+  </body>
+</html>

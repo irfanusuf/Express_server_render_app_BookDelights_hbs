@@ -1,0 +1,88 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Page</title>
+    <link rel="stylesheet" href="/css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+  </head>
+
+  <body>
+
+    <div class="hero">
+
+      <div class="tag">
+
+        <h3> Reading is best for getting Ideas </h3>
+        <h1>Keep Reading</h1>
+
+        <button type="button"> See More </button>
+
+      </div>
+
+    </div>
+
+    <div class="text">
+      <h1> Popular Books</h1>
+    </div>
+
+
+
+    <div class="cards">
+
+      {{#each data}}
+
+        <div class="card">
+          <img src={{this.bookImgUrl}} alt="book-image" />
+
+          <div class="details">
+            <div class="line">
+              <b>BOOK TITLE </b>:
+              <span>{{this.bookTitle}}</span></div>
+            <div class="line">
+              <b>BOOK AUTHOR </b>:
+              <span>{{this.bookAuthor}} </span></div>
+            <div class="line">
+              <b>BOOK DESCRIPTION </b>:
+              <span>{{this.bookDescription}} </span></div>
+            <div class="line">
+              <b>BOOK PRICE </b>:
+              <span>{{this.bookPrice}} </span></div>
+               <div class="line">
+              <b>BOOK PRICE </b>:
+              <span>{{this._id}} </span></div>
+
+          </div>
+
+          <div class="btns">
+
+            <button class="btn1 btn btn-primary">
+              <i class="bi bi-send"></i>
+              Details</button>
+
+            <button
+              class="btn2"
+              type="button"
+              class="btn btn-success"
+              data-bs-toggle="modal"
+              data-bs-target="#BuyModal-{{this._id}}"
+            >
+              <i class="fa fa-cart-plus" style="font-size:24px"></i>
+              Buy</button>
+
+              {{> buyModal}}
+
+          </div>
+
+        </div>
+
+      {{/each}}
+
+    </div>
+
+  </body>
+</html>

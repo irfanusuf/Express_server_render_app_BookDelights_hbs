@@ -1,0 +1,53 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/register.css" />
+  </head>
+  <body>
+
+    <div class="register">
+
+      <form method="post" action="/login">
+
+        <h1> Login </h1>
+
+        <label> Email</label>
+        <input placeholder="enter your email" type="text" name="email" />
+
+        <label> Password</label>
+        <input
+          placeholder="enter your Password"
+          type="password"
+          name="password"
+        />
+
+        {{#if message}}
+
+          <div class="alert alert-danger alert-dismissible">
+             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <strong>{{message}} </strong>
+     
+          </div>
+    
+        {{/if}}
+
+        {{#if successMessage}}
+
+          <div class="alert alert-success alert-dismissible">
+             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <strong>{{successMessage}} </strong>
+     
+          </div>
+    
+        {{/if}}
+
+        <button type="submit"> Login </button>
+
+      </form>
+
+    </div>
+
+  </body>
+</html>

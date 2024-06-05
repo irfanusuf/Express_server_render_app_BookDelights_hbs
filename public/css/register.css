@@ -1,0 +1,44 @@
+.register {
+  > form {
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    margin-top: 100px;
+
+    > label {
+      margin-bottom: 20px;
+    }
+
+    > input {
+      margin-bottom: 20px;
+      padding: 5px 10px;
+      border-radius: 10px;
+      border: 1px solid green;
+    }
+
+    > button {
+      width: 200px;
+      margin: auto;
+      padding: 5px 10px;
+      color: antiquewhite;
+      background-color: green;
+      border: 1px solid green;
+      border-radius: 10px;
+      font-size: larger;
+
+      &:hover {
+        background-color: rgba(0, 128, 0, 0.507);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+
+ body{
+
+
+  background-color: rgb(43, 38, 38);
+}
