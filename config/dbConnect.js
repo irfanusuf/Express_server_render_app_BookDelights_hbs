@@ -3,7 +3,8 @@
 // mongoose is an ORM
 
 const mongoose = require("mongoose");
-const url = "mongodb://localhost:27017/bookStore"
+const url = "mongodb+srv://irfanusuf33:ester4424@bookdelights.twhxoja.mongodb.net/BookDelights?retryWrites=true&w=majority&appName=BookDelights"
+// const url = "mongodb://localhost:27017/bookStore"
 
 const connectDB = async () => {
   try {
