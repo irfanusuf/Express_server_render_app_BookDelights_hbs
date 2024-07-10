@@ -36,7 +36,7 @@ const isAdmin = async (req, res, next) => {
     const userId = req.userId;
 
     // seeding id of admin
-    if (userId !== "66320c4ded8c79a76f41c742" ) {
+    if (userId !== "668e58f760d6f61f663aed2e" ) {
       res.status(401).render("login", { message: "UnAuthorized to access!" });
     } else {
       return next();
